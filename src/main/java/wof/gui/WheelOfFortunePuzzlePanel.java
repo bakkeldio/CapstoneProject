@@ -19,8 +19,7 @@ public class WheelOfFortunePuzzlePanel extends JPanel {
     private static final int SQUARE_WIDTH = 35, SQUARE_HEIGHT = 45,
             SPACE_WIDTH = 2, PUZZLE_WIDTH = 12 * SQUARE_WIDTH,
             PUZZLE_HEIGHT = 4 * SQUARE_HEIGHT;
-
-    private final AudioClip CATEGORY_CLIP;
+    
 
     private WheelOfFortuneGame game;
 
@@ -31,9 +30,7 @@ public class WheelOfFortunePuzzlePanel extends JPanel {
 
         this.game = game;
 
-        CATEGORY_CLIP =
-            Applet.newAudioClip(getClass().getResource(
-                SOUNDS_DIR + "category.wav"));
+
 
         categoryLabel = new JLabel();
         categoryLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -49,7 +46,7 @@ public class WheelOfFortunePuzzlePanel extends JPanel {
     public void newGame() {
         game.newPhrase();
         categoryLabel.setText(game.getCategory());
-        CATEGORY_CLIP.play();
+
 
         // Repaint to show the new puzzle
         repaint();

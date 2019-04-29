@@ -480,7 +480,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
             } else if (game.isSolved()) {
                 handleWin();
             }
-
             puzzlePanel.repaint();
         }
     }
