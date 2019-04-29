@@ -311,7 +311,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
 
     private void showAbout() {
         JOptionPane.showMessageDialog(null,
-            "Created by Bakkeldi Orozbekov\nApril 20, 2019",
+            "Created by BO\nApril 20, 2019",
             "About", JOptionPane.INFORMATION_MESSAGE);
     }
 

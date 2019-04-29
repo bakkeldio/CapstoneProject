@@ -10,7 +10,7 @@ import wof.game.WheelOfFortuneGame;
 
 public class WheelOfFortuneFrame extends JFrame {
     public WheelOfFortuneFrame() {
-        super("Wheel of Fortune");
+        super("Wheel of Fortune Game");
 
         WheelOfFortuneGame game = new WheelOfFortuneGame();
 
