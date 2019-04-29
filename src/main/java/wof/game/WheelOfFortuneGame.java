@@ -1,8 +1,6 @@
 package wof.game;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -27,8 +25,7 @@ public class WheelOfFortuneGame {
 
         try {
             BufferedReader reader =
-                new BufferedReader(new InputStreamReader(getClass()
-                    .getResourceAsStream(PHRASES_DIR + "phrases.txt")));
+                    new BufferedReader(new FileReader(new File(PHRASES_DIR + "phrases.txt")));
 
             while (reader.ready()) {
                 CATEGORIES.add(reader.readLine());
@@ -36,12 +33,12 @@ public class WheelOfFortuneGame {
                 StringBuilder phrase = new StringBuilder();
 
                 for (int i = 0; i < 4; ++i) {
-                    phrase.append(reader.readLine());
+                    phrase.append(CATEGORIES);
                 }
 
                 PHRASES.add(phrase.toString());
             }
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             CATEGORIES.add("Error");
             PHRASES.add("             No Phrases     File                ");
         }

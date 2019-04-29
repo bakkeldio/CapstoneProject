@@ -1,7 +1,4 @@
 package wof.gui;
-
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -39,8 +36,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
 
     private final Map<String, Image> IMAGES;
 
-    private final AudioClip SPINNING_WHEEL_CLIP, GOOD_GUESS_CLIP,
-            BAD_GUESS_CLIP, BANKRUPT_CLIP, NO_MORE_VOWELS_CLIP;
 
     private WheelOfFortuneGame game;
 
@@ -102,21 +97,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
         this.topPanel = topPanel;
         this.puzzlePanel = puzzlePanel;
 
-        SPINNING_WHEEL_CLIP =
-                Applet.newAudioClip(getClass().getResource(
-                        SOUNDS_DIR + "spinningWheel.wav"));
-        GOOD_GUESS_CLIP =
-                Applet.newAudioClip(getClass().getResource(
-                        SOUNDS_DIR + "goodGuess.wav"));
-        BAD_GUESS_CLIP =
-                Applet.newAudioClip(getClass().getResource(
-                        SOUNDS_DIR + "badGuess.wav"));
-        BANKRUPT_CLIP =
-                Applet.newAudioClip(getClass().getResource(
-                        SOUNDS_DIR + "bankrupt.wav"));
-        NO_MORE_VOWELS_CLIP =
-                Applet.newAudioClip(getClass().getResource(
-                        SOUNDS_DIR + "noMoreVowels.wav"));
+
 
         // Store the toolkit for easier access and fewer calls
         Toolkit defaultToolkit = Toolkit.getDefaultToolkit();
@@ -126,7 +107,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
             for (String imageName : IMAGE_NAMES) {
                 IMAGES.put(
                         imageName,
-                        defaultToolkit.getImage(getClass().getResource(
+                        defaultToolkit.getImage((
                                 IMAGES_DIR + imageName)));
             }
 
@@ -137,16 +118,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                         IMAGES_DIR + "arrow.png")));
 
 
-        wheelTimer = new Timer(25, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String value = imageNames.get(0);
-                imageNames.remove(0);
-                imageNames.add(value);
-
-                repaint();
-            }
-        });
 
         letterButtons = new JButton[26];
         buttonListener = new ButtonListener();
@@ -340,7 +311,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
 
     private void showAbout() {
         JOptionPane.showMessageDialog(null,
-            "Created by Bakkeldi Orozbekov\nJuly 12, 2015",
+            "Created by Bakkeldi Orozbekov\nApril 20, 2019",
             "About", JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -358,7 +329,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                         topPanel.addScore(-250);
 
                         if (occurrences > 0) {
-                            GOOD_GUESS_CLIP.play();
 
                             statusArea.setText("There "
                                 + (occurrences == 1 ? "is" : "are") + " "
@@ -367,7 +337,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                                 + " in the puzzle! Please spin the"
                                 + "wheel or buy another vowel.");
                         } else {
-                            BAD_GUESS_CLIP.play();
 
                             topPanel.subtractTurn();
 
@@ -378,7 +347,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                         }
 
                         if (game.isAllVowelsGuessed()) {
-                            NO_MORE_VOWELS_CLIP.play();
+
 
                             game.disableVowels();
 
@@ -391,7 +360,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                         spinWheel.setEnabled(true);
 
                         if (occurrences > 0) {
-                            GOOD_GUESS_CLIP.play();
+
 
                             int amount =
                                 Integer.parseInt(spaceLanded.substring(0,
@@ -408,7 +377,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                                 + "! Please spin the wheel again "
                                 + "or buy a vowel.");
                         } else {
-                            BAD_GUESS_CLIP.play();
                             topPanel.subtractTurn();
 
                             statusArea.setText("Sorry, there are no "
@@ -428,7 +396,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                 String cmd = e.getActionCommand();
 
                 if (cmd.equals("Spin Wheel")) {
-                    SPINNING_WHEEL_CLIP.loop();
 
                     solvePuzzle.setEnabled(false);
                     setEnabledVowels(false);
@@ -437,7 +404,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                     statusArea.setText("The wheel is spinning...");
                     spinWheel.setText("Stop Wheel");
                 } else if (cmd.equals("Stop Wheel")) {
-                    SPINNING_WHEEL_CLIP.stop();
                     wheelTimer.stop();
                     solvePuzzle.setEnabled(true);
                     spinWheel.setText("Spin Wheel");
@@ -451,7 +417,6 @@ public class WheelOfFortuneWheelPanel extends JPanel {
                         setEnabledVowels(game.getScore() >= 250);
                         setEnabledGuessedLetters(false);
                     } else if (spaceLanded.equals("bankrupt.png")) {
-                        BANKRUPT_CLIP.play();
 
                         topPanel.subtractTurn();
                         topPanel.resetScore();
