@@ -1,7 +1,4 @@
 package wof.gui;
-
-import java.applet.Applet;
-import java.applet.AudioClip;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -14,12 +11,11 @@ import javax.swing.JPanel;
 import wof.game.WheelOfFortuneGame;
 
 public class WheelOfFortunePuzzlePanel extends JPanel {
-    private static final String SOUNDS_DIR = "/resources/sounds/";
 
     private static final int SQUARE_WIDTH = 35, SQUARE_HEIGHT = 45,
             SPACE_WIDTH = 2, PUZZLE_WIDTH = 12 * SQUARE_WIDTH,
             PUZZLE_HEIGHT = 4 * SQUARE_HEIGHT;
-    
+
 
     private WheelOfFortuneGame game;
 
