@@ -25,8 +25,8 @@ import javax.swing.Timer;
 import wof.game.WheelOfFortuneGame;
 
 public class WheelOfFortuneWheelPanel extends JPanel {
-    private static final String IMAGES_DIR = "/resources/images/",
-            SOUNDS_DIR = "/resources/sounds/";
+    private static final String IMAGES_DIR = "/resources/images/";
+
 
     private static final String[] IMAGE_NAMES;
 
