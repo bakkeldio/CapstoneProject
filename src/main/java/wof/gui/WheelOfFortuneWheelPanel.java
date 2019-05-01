@@ -317,8 +317,8 @@ public class WheelOfFortuneWheelPanel extends JPanel {
 
     private class ButtonListener implements ActionListener {
         @Override
-        public void actionPerformed(ActionEvent e) {
-            JButton source = (JButton)e.getSource();
+        public void actionPerformed(ActionEvent b) {
+            JButton source = (JButton)b.getSource();
 
             for (int c = 0; c < letterButtons.length; c++) {
                 if (source == letterButtons[c]) {
