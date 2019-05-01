@@ -20,8 +20,8 @@ public class WheelOfFortuneGame {
     private int score, remainingTurns;
 
     public WheelOfFortuneGame() {
-        CATEGORIES = new ArrayList<String>();
-        PHRASES = new ArrayList<String>();
+        CATEGORIES = new ArrayList<>();
+        PHRASES = new ArrayList<>();
 
         try {
             BufferedReader reader =
@@ -40,7 +40,7 @@ public class WheelOfFortuneGame {
             }
         } catch (IOException ex) {
             CATEGORIES.add("Error");
-            PHRASES.add("             No Phrases     File                ");
+            PHRASES.add(  " Lion King "  );
         }
 
         score = 0;
