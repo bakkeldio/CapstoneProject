@@ -393,7 +393,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
             }
 
             if (source == spinWheel) {
-                String cmd = e.getActionCommand();
+                String cmd = b.getActionCommand();
 
                 if (cmd.equals("Spin Wheel")) {
 
