@@ -8,7 +8,14 @@ Title of the Project | 2048 game
 Topic addressed by the project | Interesting project
 Background | You have to combine various tiles starting with a   tile of 2 and combining them together to reach 2048
 Aim of the project (what) | Aim of this project is to fix all the topics that were covered in the second semester. Make something of your own.
-Objectives of the project (why) | 
+Objectives of the project (why) | The objectives of this project are:
+1) To design an Interactive Wheel an of Fortune game.
+2)To collect information on doing such game projects.
+3)To identify and evaluate level of user interest to such projects.
+4)To produce full exiting and interesting game.
+5)To provide project with cool tool for using.
+6)To improve capabilities of this project.
+
 Expected outcomes | High expectations
 Proposed activities | Power Point Presentation
 Estimative budget | 0 $
