@@ -5,7 +5,7 @@ Bishkek 2019
 
 Title of the Project | 2048 game
 -- | --
-Topic addressed by the project | The simple and at the same time interesting mobile   game
+Topic addressed by the project | Interesting project
 Background | You have to combine various tiles starting with a   tile of 2 and combining them together to reach 2048
 Aim of the project (what) | The aim is to show that on a relatively small code   you can get a good all-known game.
 Objectives of the project (why) | This game was one of the favorite phone games. Being   inspired I want to try to do something similar
@@ -14,7 +14,11 @@ Proposed activities | Power Point Presentation
 Estimative budget | 0 $
 Proposed partners | Nobody
 Git repository link | https://github.com/zaiyr00/2048-game
-Contact person | Name      :   Zaiyr   Surname : Sharsheev   email       :   zaiyr.sharsheev@iaau.edu.kg   mobile    : +996 222   20 30 68
+Contact person | Name      :   Name      : Bakkeldi
+Surname :Orozbekov
+email       :bakkeldi.orozbekov@iaau.edu.kg
+mobile    : 0552552179
+
 
 Software Features List  :
 1.	Data storage (Files, Databases)
