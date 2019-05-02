@@ -21,8 +21,8 @@ Proposed activities | Power Point Presentation
 Estimative budget | 0 $
 Proposed partners | Nobody
 Git repository link |https://github.com/bakkeldio/CapstoneProject.git
-Contact person | Name      :   Name      : Bakkeldi
-Surname :Orozbekov
+Contact person | Name      : Bakkeldi
+Surname : Orozbekov
 email       :bakkeldi.orozbekov@iaau.edu.kg
 mobile    : 0552552179
 
