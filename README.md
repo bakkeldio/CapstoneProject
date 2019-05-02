@@ -3,10 +3,10 @@
 
 Bishkek 2019
 
-Title of the Project | 2048 game
+Title of the Project | CurrencyConverter
 -- | --
 Topic addressed by the project | Interesting project
-Background | You have to combine various tiles starting with a   tile of 2 and combining them together to reach 2048
+Background | Background of this project. It is idea to create something interesting to play for users.
 Aim of the project (what) | Aim of this project is to fix all the topics that were covered in the second semester. Make something of your own.
 Objectives of the project (why) | The objectives of this project are:
 1) To design an Interactive Wheel an of Fortune game.
